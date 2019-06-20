@@ -21,7 +21,8 @@ RUN apt-get update \
     && npm install node-gyp -g 
 
 # 디렉토리 생성 및 소스 복사
-RUN cd ${APP_DIR} \
+RUN mkdir -p ${APP_DIR} \
+    && cd ${APP_DIR} \
     && npm install -g express express-generator \
     && npm install java jdbc
 
